@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مطعم الروابي | قائمة الطعام</title>
+<meta name="description" content="قائمة مطعم الروابي: مشاوي، شاورما، كنتاكي، معجنات وبيتزا. تصفّح الأصناف والأسعار وجهّز طلبك.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef0ec;--card:#fff;--ink:#1b2420;--mute:#66706a;--green:#1f3a32;--ember:#c8402a;--line:#dde1db;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#141a17;--card:#1d2621;--ink:#eef0ec;--mute:#9aa59f;--green:#0f1f19;--ember:#ec6a4f;--line:#2b3731;color-scheme:dark}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{font-family:Tajawal,system-ui,sans-serif;background:var(--bg);color:var(--ink);padding-bottom:90px;line-height:1.6}
+button{font:inherit;cursor:pointer;border:0;color:inherit;background:none}
+:focus-visible{outline:3px solid var(--ember);outline-offset:2px}
+.hero{position:relative;color:#fff;background:var(--green) center/cover;padding:48px 20px 56px;text-align:center}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(15,31,25,.55),rgba(15,31,25,.88))}
+.hero>*{position:relative}
+.logo{width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid #fff;background:#fff}
+.hero h1{font:800 2.2rem/1.2 Cairo,sans-serif;margin-top:14px}
+.hero p{opacity:.9;margin-top:6px}
+.acts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:11px 18px;border-radius:999px;font-weight:700;text-decoration:none;color:#fff;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4)}
+.btn.main{background:var(--ember);border-color:var(--ember)}
+.modes{display:flex;margin:-24px auto 0;position:relative;max-width:360px;background:var(--card);border-radius:999px;padding:5px;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+.modes button{flex:1;padding:11px;border-radius:999px;font-weight:700;color:var(--mute)}
+.modes button[aria-pressed=true]{background:var(--green);color:#fff}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);padding:12px 12px 8px;margin-top:10px}
+.bar input{width:100%;padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:10px 2px 2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;padding:7px 15px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-weight:500}
+.chip.on{background:var(--ember);border-color:var(--ember);color:#fff}
+main{max-width:760px;margin:0 auto;padding:0 12px}
+h2{font:800 1.35rem Cairo,sans-serif;margin:26px 0 10px;padding-right:12px;border-right:5px solid var(--ember)}
+.item{display:flex;gap:12px;align-items:center;background:var(--card);border-radius:14px;padding:10px;margin-bottom:10px;border:1px solid var(--line)}
+.item img{width:84px;height:84px;border-radius:10px;object-fit:cover;flex:none;background:var(--line)}
+.info{flex:1;min-width:0}
+.info b{display:block;font-weight:700}
+.info small{color:var(--mute)}
+.price{color:var(--ember);font-weight:800;margin-top:2px}
+.add{flex:none;width:40px;height:40px;border-radius:50%;background:var(--green);color:#fff;font-size:1.4rem;line-height:1}
+.qty{display:flex;align-items:center;gap:8px;flex:none}
+.qty button{width:34px;height:34px;border-radius:50%;background:var(--line);font-size:1.2rem}
+.none{text-align:center;color:var(--mute);padding:40px 0}
+footer{max-width:760px;margin:30px auto 0;padding:0 16px;text-align:center;color:var(--mute);font-size:.9rem}
+footer button{color:var(--ember);font-weight:700;text-decoration:underline;margin-top:8px}
+.cartbar{position:fixed;inset:auto 12px 12px;max-width:736px;margin:auto;z-index:8;display:none;justify-content:space-between;align-items:center;background:var(--ember);color:#fff;border-radius:16px;padding:14px 18px;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.3);width:calc(100% - 24px)}
+.dlg{position:fixed;inset:0;z-index:10;background:rgba(0,0,0,.55);display:none;align-items:flex-end;justify-content:center}
+.dlg.open{display:flex}
+.sheet{background:var(--card);width:100%;max-width:560px;max-height:88vh;overflow:auto;border-radius:20px 20px 0 0;padding:20px}
+.sheet h3{font:800 1.25rem Cairo,sans-serif;margin-bottom:10px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 0;border-bottom:1px solid var(--line)}
+.sheet input,.sheet textarea{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;margin-top:8px}
+.tot{display:flex;justify-content:space-between;font-weight:800;font-size:1.15rem;margin:12px 0}
+.two{display:flex;gap:8px;margin-top:10px}
+.two .btn{flex:1;justify-content:center;border-radius:12px;color:#fff;background:var(--green);border:0}
+.two .btn.main{background:var(--ember)}
+.x{margin-top:10px;width:100%;padding:10px;color:var(--mute)}
+#qr{display:flex;justify-content:center;padding:14px;background:#fff;border-radius:12px;width:fit-content;margin:10px auto}
+.toast{position:fixed;top:14px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;padding:10px 18px;border-radius:999px;z-index:20;display:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<!-- الإعدادات: عدّل الأرقام هنا فقط -->
+<script>
+const CONFIG={name:"مطعم الروابي",phone:"0921699747",whatsapp:"218931800053",updated:"آخر تحديث للأسعار: ____"};
+</script>
+
+<header class="hero" id="hero">
+  <img class="logo" id="logo" alt="شعار مطعم الروابي" hidden>
+  <h1>مطعم الروابي</h1>
+  <p>مشاوي على الفحم، شاورما، كنتاكي ومعجنات</p>
+  <div class="acts">
+    <a class="btn main" id="call" href="#">اتصل بنا</a>
+    <a class="btn" id="wa" href="#" target="_blank" rel="noopener">واتساب</a>
+  </div>
+</header>
+
+<div class="modes" role="group" aria-label="نوع الطلب">
+  <button id="m-sections" aria-pressed="true">سفري / توصيل</button>
+  <button id="m-hall_sections" aria-pressed="false">منيو الصالة</button>
+</div>
+
+<div class="bar">
+  <input id="q" type="search" placeholder="ابحث عن صنف..." aria-label="بحث">
+  <nav class="chips" id="chips" aria-label="الأقسام"></nav>
+</div>
+
+<main id="list"><p class="none">جاري تحميل قائمة الطعام...</p></main>
+
+<footer>
+  <p id="upd"></p>
+  <p>جميع الأسعار بالدينار الليبي. تجهيز الطلب هنا لا يعني تأكيده لدى المطعم.</p>
+  <button id="qrbtn">عرض رمز QR للمنيو</button>
+</footer>
+
+<button class="cartbar" id="cartbar" aria-label="فتح سلة الطلب"><span id="cc"></span><span id="ct"></span></button>
+
+<div class="dlg" id="cartdlg" role="dialog" aria-modal="true" aria-label="طلبك">
+  <div class="sheet">
+    <h3>طلبك من الروابي</h3>
+    <div id="clines"></div>
+    <div class="tot"><span>المجموع</span><span id="ctot"></span></div>
+    <input id="cname" placeholder="الاسم (اختياري)" autocomplete="name">
+    <input id="cphone" placeholder="رقم الهاتف (اختياري)" inputmode="tel" autocomplete="tel">
+    <textarea id="cnote" rows="2" placeholder="ملاحظات الطلب"></textarea>
+    <div class="two">
+      <button class="btn" id="copy">نسخ الطلب</button>
+      <a class="btn main" id="send" href="#" target="_blank" rel="noopener">إرسال عبر واتساب</a>
+    </div>
+    <button class="x" data-close>إغلاق</button>
+  </div>
+</div>
+
+<div class="dlg" id="qrdlg" role="dialog" aria-modal="true" aria-label="رمز QR">
+  <div class="sheet" style="text-align:center">
+    <h3>امسح الرمز لفتح المنيو</h3>
+    <div id="qr"></div>
+    <button class="x" data-close>إغلاق</button>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+const $=s=>document.querySelector(s);
+let DATA=null,mode="sections",cart=new Map(),term="";
+const num=p=>parseInt(String(p).replace(/[^\d]/g,""))||0;
+const fmt=n=>n+" د.ل";
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+
+$("#call").href="tel:"+CONFIG.phone;
+$("#wa").href="https://wa.me/"+CONFIG.whatsapp;
+$("#upd").textContent=CONFIG.updated;
+
+fetch("menu.json").then(r=>r.json()).then(d=>{
+  DATA=d;
+  if(d.logo){const l=$("#logo");l.src=d.logo;l.hidden=false;l.onerror=()=>l.hidden=true}
+  if(d.background)$("#hero").style.backgroundImage="url('"+d.background+"')";
+  render();
+}).catch(()=>{$("#list").replaceChildren(el("p","none","تعذّر تحميل القائمة. تأكد من وجود ملف menu.json بجانب الصفحة، أو اتصل بنا لمعرفة الأصناف."))});
+
+["sections","hall_sections"].forEach(m=>{
+  $("#m-"+m).onclick=()=>{mode=m;cart.clear();["sections","hall_sections"].forEach(k=>$("#m-"+k).setAttribute("aria-pressed",k===m));render();updCart()}
+});
+$("#q").oninput=e=>{term=e.target.value.trim();render()};
+
+function render(){
+  if(!DATA)return;
+  const list=$("#list"),chips=$("#chips");
+  list.replaceChildren();chips.replaceChildren();
+  let any=false;
+  (DATA[mode]||[]).forEach((s,si)=>{
+    const items=s.items.map((it,ii)=>({it,key:mode+"|"+si+"|"+ii})).filter(o=>!term||(o.it.name+" "+o.it.description).includes(term));
+    if(!items.length)return;
+    any=true;
+    const id="s"+si;
+    const c=el("button","chip",s.section_name);
+    c.onclick=()=>document.getElementById(id).scrollIntoView();
+    chips.append(c);
+    const h=el("h2",null,s.section_name);h.id=id;list.append(h);
+    items.forEach(o=>list.append(card(o)));
+  });
+  if(!any)list.append(el("p","none","لا توجد أصناف مطابقة لبحثك."));
+  observe();
+}
+
+function card({it,key}){
+  const d=el("div","item");
+  if(it.image){const i=el("img");i.src=it.image;i.alt=it.name;i.loading="lazy";i.onerror=()=>i.remove();d.append(i)}
+  const info=el("div","info");
+  info.append(el("b",null,it.name));
+  if(it.description)info.append(el("small",null,it.description));
+  info.append(el("div","price",it.price));
+  d.append(info);
+  const box=el("div");d.append(box);
+  const draw=()=>{
+    box.replaceChildren();
+    const q=cart.get(key)?.q||0;
+    if(!q){const a=el("button","add","+");a.setAttribute("aria-label","أضف "+it.name);a.onclick=()=>{cart.set(key,{it,q:1});draw();updCart()};box.append(a)}
+    else{
+      const w=el("div","qty");
+      const p=el("button",null,"+"),m=el("button",null,"−");
+      p.setAttribute("aria-label","زيادة");m.setAttribute("aria-label","إنقاص");
+      p.onclick=()=>{cart.get(key).q++;draw();updCart()};
+      m.onclick=()=>{const c=cart.get(key);c.q--;if(c.q<=0)cart.delete(key);draw();updCart()};
+      w.append(p,el("b",null,q),m);box.append(w);
+    }
+  };
+  draw();
+  return d;
+}
+
+function observe(){
+  const hs=[...document.querySelectorAll("h2")],cs=[...document.querySelectorAll(".chip")];
+  if(!hs.length)return;
+  window.onscroll=()=>{
+    let cur=0;hs.forEach((h,i)=>{if(h.getBoundingClientRect().top<150)cur=i});
+    cs.forEach((c,i)=>c.classList.toggle("on",i===cur));
+    if(cs[cur])cs[cur].scrollIntoView({block:"nearest",inline:"center"});
+  };
+  window.onscroll();
+}
+
+const total=()=>[...cart.values()].reduce((s,c)=>s+num(c.it.price)*c.q,0);
+const count=()=>[...cart.values()].reduce((s,c)=>s+c.q,0);
+function updCart(){
+  const n=count(),b=$("#cartbar");
+  b.style.display=n?"flex":"none";
+  $("#cc").textContent="طلبي ("+n+")";
+  $("#ct").textContent=fmt(total());
+}
+function orderText(){
+  const L=["طلب جديد من "+CONFIG.name+" ("+(mode==="sections"?"سفري/توصيل":"الصالة")+")",""];
+  cart.forEach(c=>L.push("• "+c.it.name+" × "+c.q+" = "+fmt(num(c.it.price)*c.q)));
+  L.push("","المجموع: "+fmt(total()));
+  const n=$("#cname").value.trim(),p=$("#cphone").value.trim(),t=$("#cnote").value.trim();
+  if(n)L.push("الاسم: "+n);if(p)L.push("الهاتف: "+p);if(t)L.push("ملاحظات: "+t);
+  return L.join("\n");
+}
+function openCart(){
+  const w=$("#clines");w.replaceChildren();
+  cart.forEach((c,k)=>{
+    const r=el("div","row");
+    r.append(el("span",null,c.it.name+" × "+c.q),el("b",null,fmt(num(c.it.price)*c.q)));
+    w.append(r);
+  });
+  $("#ctot").textContent=fmt(total());
+  $("#cartdlg").classList.add("open");
+}
+$("#cartbar").onclick=openCart;
+$("#send").onclick=e=>{$("#send").href="https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(orderText())};
+$("#copy").onclick=()=>{
+  const t=orderText();
+  (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast("تم نسخ الطلب"),()=>toast("تعذّر النسخ، استخدم زر واتساب"));
+};
+$("#qrbtn").onclick=()=>{
+  const q=$("#qr");q.replaceChildren();
+  if(window.QRCode)new QRCode(q,{text:location.origin+location.pathname,width:220,height:220});
+  else q.textContent="تعذّر إنشاء الرمز";
+  $("#qrdlg").classList.add("open");
+};
+document.querySelectorAll(".dlg").forEach(d=>d.addEventListener("click",e=>{if(e.target===d||e.target.hasAttribute("data-close"))d.classList.remove("open")}));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".dlg.open").forEach(d=>d.classList.remove("open"))});
+function toast(m){const t=$("#toast");t.textContent=m;t.style.display="block";setTimeout(()=>t.style.display="none",2200)}
+</script>
+</body>
+</html>
