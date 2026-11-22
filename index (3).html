@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مطعم الروابي | قائمة الطعام</title>
+<meta name="description" content="قائمة مطعم الروابي: مشاوي، شاورما، كنتاكي، معجنات وبيتزا. تصفّح الأصناف والأسعار وجهّز طلبك.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#120c0a;--card:#1b1210;--line:#3b2418;--org:#ff7a3d;--ink:#f6ece6;--mute:#a58f84;--btn:#7a2410;--grad:linear-gradient(90deg,#e8401c,#ff7a1f);color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Tajawal,system-ui,sans-serif;background:var(--bg);color:var(--ink);padding-bottom:110px;line-height:1.5}
+button{font:inherit;cursor:pointer;border:0;color:inherit;background:none}
+:focus-visible{outline:3px solid var(--org);outline-offset:2px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.brand b{font:800 1.5rem Cairo,sans-serif;color:var(--org);display:block;line-height:1.2}
+.brand small{color:var(--mute);font-size:.8rem}
+.tag{color:var(--org);font-weight:700;font-size:.85rem;text-align:center}
+.call{display:inline-block;background:var(--btn);color:#fff;text-decoration:none;font-weight:700;padding:10px 16px;border-radius:12px}
+.hero{height:42vh;min-height:230px;max-height:420px;background:#2a1a14 center/cover;position:relative;display:flex;align-items:flex-end;justify-content:center}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,var(--bg))}
+.hero img{position:relative;z-index:1;width:92px;height:92px;border-radius:50%;object-fit:cover;border:3px solid var(--org);background:#fff;margin-bottom:-26px}
+.wrap{max-width:900px;margin:0 auto;padding:0 14px}
+.btns{display:flex;gap:8px;margin-top:44px}
+.btns a,.btns button{flex:1;text-align:center;text-decoration:none;font:800 .95rem Cairo,sans-serif;padding:15px 4px;border-radius:14px;color:#fff}
+.b-call{background:#1f6feb}
+.b-wa{background:#178a41}
+.b-hall{background:#f5a524;color:#1b1210!important}
+.note{margin-top:12px;padding:12px 14px;border:1px dashed var(--org);border-radius:14px;color:var(--org);font-weight:700;text-align:center}
+.modes{display:flex;gap:8px;margin-top:12px}
+.modes button{flex:1;padding:11px;border-radius:14px;border:1px solid var(--line);font-weight:700;color:var(--mute)}
+.modes button[aria-pressed=true]{background:var(--grad);border-color:transparent;color:#fff}
+.sticky{position:sticky;top:0;z-index:5;background:var(--bg);padding:12px 0 8px}
+.sticky input{width:100%;padding:15px 18px;border-radius:16px;border:1px solid var(--line);background:#1a110e;color:var(--ink);font:inherit}
+.sticky input::placeholder{color:var(--mute)}
+.chips{display:flex;gap:10px;overflow-x:auto;padding:12px 0 4px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;padding:11px 20px;border-radius:999px;border:1px solid var(--line);color:var(--org);font-weight:700}
+.chip.on{background:var(--grad);border-color:transparent;color:#fff}
+h2{font:800 1.3rem Cairo,sans-serif;color:var(--org);margin:26px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.pic{position:relative;aspect-ratio:16/10;background:linear-gradient(135deg,#3a1d12,#1b1210);display:flex;align-items:center;justify-content:center;font-size:2.2rem}
+.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.heart{position:absolute;top:8px;right:8px;width:38px;height:38px;border-radius:50%;background:#fff;color:var(--org);font-size:1.2rem;z-index:1}
+.body{padding:12px 14px 14px;display:flex;flex-direction:column;flex:1}
+.nm{font:700 1.05rem Cairo,sans-serif;color:var(--org);line-height:1.4}
+.ds{color:var(--mute);font-size:.82rem;margin-top:2px}
+.foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:12px}
+.pr b{font:800 1.7rem Cairo,sans-serif}
+.pr small{color:var(--mute);margin-inline-start:4px}
+.add{width:50px;height:50px;border-radius:50%;background:var(--btn);color:#fff;font-size:1.7rem;line-height:1}
+.qty{display:flex;align-items:center;gap:8px;background:var(--btn);border-radius:999px;padding:3px}
+.qty button{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.15);font-size:1.2rem}
+.qty b{min-width:18px;text-align:center}
+.none{text-align:center;color:var(--mute);padding:50px 0}
+footer{max-width:900px;margin:34px auto 0;padding:0 16px;text-align:center;color:var(--mute);font-size:.88rem}
+footer button{color:var(--org);font-weight:700;text-decoration:underline;margin-top:8px}
+.cartbar{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);width:calc(100% - 28px);max-width:872px;z-index:8;display:none;justify-content:space-between;align-items:center;background:var(--grad);color:#fff;border-radius:22px;padding:20px 26px;font:800 1.2rem Cairo,sans-serif;box-shadow:0 10px 30px rgba(232,64,28,.35)}
+.dlg{position:fixed;inset:0;z-index:10;background:rgba(0,0,0,.65);display:none;align-items:flex-end;justify-content:center}
+.dlg.open{display:flex}
+.sheet{background:var(--card);border:1px solid var(--line);width:100%;max-width:560px;max-height:88vh;overflow:auto;border-radius:22px 22px 0 0;padding:20px}
+.sheet h3{font:800 1.25rem Cairo,sans-serif;color:var(--org);margin-bottom:10px}
+.row{display:flex;justify-content:space-between;gap:8px;padding:9px 0;border-bottom:1px solid var(--line)}
+.sheet input,.sheet textarea{width:100%;padding:11px 13px;border-radius:12px;border:1px solid var(--line);background:#120c0a;color:var(--ink);font:inherit;margin-top:8px}
+.tot{display:flex;justify-content:space-between;font:800 1.2rem Cairo,sans-serif;margin:12px 0}
+.two{display:flex;gap:8px;margin-top:10px}
+.two .btn{flex:1;text-align:center;padding:13px;border-radius:14px;color:#fff;font-weight:700;text-decoration:none;background:var(--btn)}
+.two .btn.main{background:var(--grad)}
+.x{margin-top:10px;width:100%;padding:10px;color:var(--mute)}
+#qr{display:flex;justify-content:center;padding:14px;background:#fff;border-radius:14px;width:fit-content;margin:10px auto}
+.toast{position:fixed;top:14px;left:50%;transform:translateX(-50%);background:var(--btn);color:#fff;padding:10px 18px;border-radius:999px;z-index:20;display:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<script>
+/* الإعدادات: عدّل الأرقام هنا فقط */
+const CONFIG={name:"مطعم الروابي",phone:"0921699747",whatsapp:"218931800053",updated:"آخر تحديث للأسعار: ____"};
+</script>
+
+<header class="top">
+  <div class="brand"><b>الروابي</b><small>AL RAWABI RESTAURANT</small></div>
+  <div class="tag">مشاوي ومعجنات وشاورما</div>
+  <a class="call" id="call" href="#">اتصل ☎</a>
+</header>
+
+<div class="hero" id="hero"><img id="logo" alt="شعار مطعم الروابي" hidden></div>
+
+<div class="wrap">
+  <div class="btns">
+    <a class="b-call" id="bcall" href="#">📞 اتصال هاتفي</a>
+    <a class="b-wa" id="bwa" href="#" target="_blank" rel="noopener">💬 واتساب</a>
+    <button class="b-hall" id="bhall">📋 منيو الصالة</button>
+  </div>
+  <p class="note">للطلب أضف الوجبات وأرسلها عبر الواتس اب</p>
+  <div class="modes" role="group" aria-label="نوع الطلب">
+    <button id="m-sections" aria-pressed="true">سفري / توصيل</button>
+    <button id="m-hall_sections" aria-pressed="false">منيو الصالة</button>
+  </div>
+  <div class="sticky">
+    <input id="q" type="search" placeholder="ابحث عن وجبتك... مشاوي، شاورما، كنتاكي" aria-label="بحث">
+    <nav class="chips" id="chips" aria-label="الأقسام"></nav>
+  </div>
+  <main id="list"><p class="none">جاري تحميل قائمة الطعام...</p></main>
+</div>
+
+<footer>
+  <p id="upd"></p>
+  <p>جميع الأسعار بالدينار الليبي. تجهيز الطلب هنا لا يعني تأكيده لدى المطعم.</p>
+  <button id="qrbtn">عرض رمز QR للمنيو</button>
+</footer>
+
+<button class="cartbar" id="cartbar" aria-label="عرض طلبك"><span id="cc"></span><span id="ct"></span></button>
+
+<div class="dlg" id="cartdlg" role="dialog" aria-modal="true" aria-label="طلبك">
+  <div class="sheet">
+    <h3>طلبك من الروابي</h3>
+    <div id="clines"></div>
+    <div class="tot"><span>المجموع</span><span id="ctot"></span></div>
+    <input id="cname" placeholder="الاسم (اختياري)" autocomplete="name">
+    <input id="cphone" placeholder="رقم الهاتف (اختياري)" inputmode="tel" autocomplete="tel">
+    <textarea id="cnote" rows="2" placeholder="ملاحظات الطلب"></textarea>
+    <div class="two">
+      <button class="btn" id="copy">نسخ الطلب</button>
+      <a class="btn main" id="send" href="#" target="_blank" rel="noopener">إرسال عبر واتساب</a>
+    </div>
+    <button class="x" data-close>إغلاق</button>
+  </div>
+</div>
+
+<div class="dlg" id="qrdlg" role="dialog" aria-modal="true" aria-label="رمز QR">
+  <div class="sheet" style="text-align:center">
+    <h3>امسح الرمز لفتح المنيو</h3>
+    <div id="qr"></div>
+    <button class="x" data-close>إغلاق</button>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+const $=s=>document.querySelector(s);
+let DATA=null,mode="sections",cart=new Map(),term="",favOnly=false,favs=new Set(),lastCur=-2;
+try{favs=new Set(JSON.parse(localStorage.getItem("favs")||"[]"))}catch(e){}
+const saveFavs=()=>{try{localStorage.setItem("favs",JSON.stringify([...favs]))}catch(e){}};
+const num=p=>parseInt(String(p).replace(/[^\d]/g,""))||0;
+const fmt=n=>n+" د.ل";
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+
+$("#call").href=$("#bcall").href="tel:"+CONFIG.phone;
+$("#bwa").href="https://wa.me/"+CONFIG.whatsapp;
+$("#bwa").onclick=()=>{$("#bwa").href="https://wa.me/"+CONFIG.whatsapp+(count()?"?text="+encodeURIComponent(orderText()):"")};
+$("#bhall").onclick=()=>{$("#m-hall_sections").click();window.scrollTo({top:$(".modes").offsetTop-10,behavior:"smooth"})};
+$("#upd").textContent=CONFIG.updated;
+
+fetch("menu.json").then(r=>r.json()).then(d=>{
+  DATA=d;
+  if(d.logo){const l=$("#logo");l.src=d.logo;l.hidden=false;l.onerror=()=>l.hidden=true}
+  if(d.background)$("#hero").style.backgroundImage="url('"+d.background+"')";
+  render();
+}).catch(()=>{$("#list").replaceChildren(el("p","none","تعذّر تحميل القائمة. تأكد من وجود ملف menu.json بجانب الصفحة، أو اتصل بنا لمعرفة الأصناف."))});
+
+["sections","hall_sections"].forEach(m=>{
+  $("#m-"+m).onclick=()=>{mode=m;cart.clear();["sections","hall_sections"].forEach(k=>$("#m-"+k).setAttribute("aria-pressed",k===m));render();updCart()}
+});
+$("#q").oninput=e=>{term=e.target.value.trim();render()};
+
+const favKey=(s,it)=>s.section_name+"|"+it.name;
+
+function render(){
+  if(!DATA)return;
+  const list=$("#list"),chips=$("#chips");
+  list.replaceChildren();chips.replaceChildren();
+  const all=el("button","chip","كل المنيو");
+  all.onclick=()=>{favOnly=false;term="";$("#q").value="";render();window.scrollTo({top:$(".btns").offsetTop-10,behavior:"smooth"})};
+  const fv=el("button","chip","المفضّلة ♡");
+  fv.onclick=()=>{favOnly=!favOnly;render()};
+  chips.append(all,fv);
+  let any=false;
+  (DATA[mode]||[]).forEach((s,si)=>{
+    const items=s.items.map((it,ii)=>({s,it,key:mode+"|"+si+"|"+ii}))
+      .filter(o=>(!term||(o.it.name+" "+o.it.description).includes(term))&&(!favOnly||favs.has(favKey(o.s,o.it))));
+    if(!items.length)return;
+    any=true;
+    const id="s"+si;
+    const c=el("button","chip",s.section_name);
+    c.onclick=()=>{if(favOnly){favOnly=false;render()}goTo(id)};
+    chips.append(c);
+    const h=el("h2",null,s.section_name);h.id=id;list.append(h);
+    const g=el("div","grid");items.forEach(o=>g.append(card(o)));list.append(g);
+  });
+  if(!any)list.append(el("p","none",favOnly?"لم تضف أي صنف للمفضّلة بعد. اضغط ♡ على أي وجبة.":"لا توجد أصناف مطابقة لبحثك."));
+  observe();
+}
+
+function card({s,it,key}){
+  const d=el("div","card");
+  const pic=el("div","pic");
+  if(it.image){const i=el("img");i.src=it.image;i.alt=it.name;i.loading="lazy";i.onerror=()=>i.remove();pic.append(i)}
+  else pic.textContent="🍽";
+  const fk=favKey(s,it),h=el("button","heart",favs.has(fk)?"♥":"♡");
+  h.setAttribute("aria-label","المفضّلة: "+it.name);
+  h.onclick=()=>{favs.has(fk)?favs.delete(fk):favs.add(fk);saveFavs();if(favOnly)render();else h.textContent=favs.has(fk)?"♥":"♡"};
+  pic.append(h);
+  const body=el("div","body");
+  body.append(el("div","nm",it.name));
+  if(it.description)body.append(el("div","ds",it.description));
+  const foot=el("div","foot");
+  const pr=el("div","pr"),n=num(it.price);
+  if(n){pr.append(el("b",null,n),el("small",null,"د.ل"))}else pr.append(el("b",null,it.price));
+  const box=el("div");
+  foot.append(pr,box);body.append(foot);d.append(pic,body);
+  const draw=()=>{
+    box.replaceChildren();
+    const q=cart.get(key)?.q||0;
+    if(!q){const a=el("button","add","+");a.setAttribute("aria-label","أضف "+it.name);a.onclick=()=>{cart.set(key,{it,q:1});draw();updCart()};box.append(a)}
+    else{
+      const w=el("div","qty"),p=el("button",null,"+"),m=el("button",null,"−");
+      p.setAttribute("aria-label","زيادة");m.setAttribute("aria-label","إنقاص");
+      p.onclick=()=>{cart.get(key).q++;draw();updCart()};
+      m.onclick=()=>{const c=cart.get(key);c.q--;if(c.q<=0)cart.delete(key);draw();updCart()};
+      w.append(p,el("b",null,q),m);box.append(w);
+    }
+  };
+  draw();
+  return d;
+}
+
+function goTo(id){
+  const h=document.getElementById(id);if(!h)return;
+  const top=h.getBoundingClientRect().top+window.scrollY-$(".sticky").offsetHeight-8;
+  window.scrollTo({top:Math.max(0,top),behavior:"smooth"});
+}
+function observe(){
+  const hs=[...document.querySelectorAll("h2")],cs=[...document.querySelectorAll(".chip")],box=$("#chips");
+  lastCur=-2;
+  window.onscroll=()=>{
+    const lim=$(".sticky").offsetHeight+30;
+    let cur=-1;hs.forEach((h,i)=>{if(h.getBoundingClientRect().top<lim)cur=i});
+    const idx=favOnly?1:(cur<0?0:cur+2);
+    if(idx===lastCur)return;
+    lastCur=idx;
+    cs.forEach((c,i)=>c.classList.toggle("on",i===idx));
+    const c=cs[idx];if(!c)return;
+    const cr=c.getBoundingClientRect(),br=box.getBoundingClientRect();
+    box.scrollTo({left:box.scrollLeft+(cr.left+cr.width/2)-(br.left+br.width/2),behavior:"smooth"});
+  };
+  window.onscroll();
+}
+
+const total=()=>[...cart.values()].reduce((s,c)=>s+num(c.it.price)*c.q,0);
+const count=()=>[...cart.values()].reduce((s,c)=>s+c.q,0);
+function updCart(){
+  const n=count(),b=$("#cartbar");
+  b.style.display=n?"flex":"none";
+  $("#cc").textContent="عرض طلبك · "+n+" قطع";
+  $("#ct").textContent=fmt(total());
+}
+function orderText(){
+  const L=["طلب جديد من "+CONFIG.name+" ("+(mode==="sections"?"سفري/توصيل":"الصالة")+")",""];
+  cart.forEach(c=>L.push("• "+c.it.name+" × "+c.q+" = "+fmt(num(c.it.price)*c.q)));
+  L.push("","المجموع: "+fmt(total()));
+  const n=$("#cname").value.trim(),p=$("#cphone").value.trim(),t=$("#cnote").value.trim();
+  if(n)L.push("الاسم: "+n);if(p)L.push("الهاتف: "+p);if(t)L.push("ملاحظات: "+t);
+  return L.join("\n");
+}
+$("#cartbar").onclick=()=>{
+  const w=$("#clines");w.replaceChildren();
+  cart.forEach(c=>{const r=el("div","row");r.append(el("span",null,c.it.name+" × "+c.q),el("b",null,fmt(num(c.it.price)*c.q)));w.append(r)});
+  $("#ctot").textContent=fmt(total());
+  $("#cartdlg").classList.add("open");
+};
+$("#send").onclick=()=>{$("#send").href="https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(orderText())};
+$("#copy").onclick=()=>{
+  (navigator.clipboard?navigator.clipboard.writeText(orderText()):Promise.reject()).then(()=>toast("تم نسخ الطلب"),()=>toast("تعذّر النسخ، استخدم زر واتساب"));
+};
+$("#qrbtn").onclick=()=>{
+  const q=$("#qr");q.replaceChildren();
+  if(window.QRCode)new QRCode(q,{text:location.origin+location.pathname,width:220,height:220});
+  else q.textContent="تعذّر إنشاء الرمز";
+  $("#qrdlg").classList.add("open");
+};
+document.querySelectorAll(".dlg").forEach(d=>d.addEventListener("click",e=>{if(e.target===d||e.target.hasAttribute("data-close"))d.classList.remove("open")}));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".dlg.open").forEach(d=>d.classList.remove("open"))});
+function toast(m){const t=$("#toast");t.textContent=m;t.style.display="block";setTimeout(()=>t.style.display="none",2200)}
+</script>
+</body>
+</html>
