@@ -1,0 +1,1286 @@
+{
+  "logo": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1794943636522_83.jpg",
+  "background": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1794943643745_863.jpg",
+  "sections": [
+    {
+      "section_name": "وجبات الروابي لحم",
+      "items": [
+        {
+          "name": "وجبة كباب لحم",
+          "description": "(3 أسياخ - رز - بطاطا)",
+          "price": "35 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795020985223_294.jpg"
+        },
+        {
+          "name": "وجبة شيش لحم",
+          "description": "(3 أسياخ - رز - بطاطا)",
+          "price": "50 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1794943656533_465.jpg"
+        },
+        {
+          "name": "وجبة كفتة لحم",
+          "description": "",
+          "price": "45 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795185602098_86.jpg"
+        },
+        {
+          "name": "وجبة كباب لحم بالجبنه",
+          "description": "",
+          "price": "50 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795286535290_265.jpg"
+        },
+        {
+          "name": "وجبة ليالي بالجبنة والمكسرات",
+          "description": "",
+          "price": "50 د.ل",
+          "image": ""
+        },
+        {
+          "name": "وجبة حوت",
+          "description": "(رز - بطاطا)",
+          "price": "60 د.ل",
+          "image": ""
+        },
+        {
+          "name": "كيلو كباب لحم",
+          "description": "(14 سيخ - رز - بطاطا)",
+          "price": "130 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795279722429_366.jpg"
+        },
+        {
+          "name": "نص كيلو كباب لحم",
+          "description": "(7 أسياخ - رز - بطاطا)",
+          "price": "70 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795030750819_568.jpg"
+        },
+        {
+          "name": "وجبة سوشي كباب لحم",
+          "description": "",
+          "price": "35 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795109051205_25.jpg"
+        },
+        {
+          "name": "وجبة سوشي كباب لحم بالجبنة",
+          "description": "",
+          "price": "40 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795109053606_225.jpg"
+        },
+        {
+          "name": "وجبة كباب لحم سيخين",
+          "description": "(سيخين - رز - بطاطا)",
+          "price": "27 د.ل",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "section_name": "وجبات الروابي دجاج",
+      "items": [
+        {
+          "name": "وجبة شيش طاووق",
+          "description": "(3 أسياخ - رز - بطاطا)",
+          "price": "35 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795020487928_775.jpg"
+        },
+        {
+          "name": "وجبة كباب دجاج",
+          "description": "(3 أسياخ - رز - بطاطا)",
+          "price": "30 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795020489549_211.jpg"
+        },
+        {
+          "name": "وجبة جناوح دجاج",
+          "description": "(سيخين - رز - بطاطا)",
+          "price": "27 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1794949430228_269.jpg"
+        },
+        {
+          "name": "وجبة كباب دجاج بالجبنه",
+          "description": "",
+          "price": "45 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795288335785_506.jpg"
+        },
+        {
+          "name": "وجبة نص دجاج مشوية",
+          "description": "(رز - بطاطا)",
+          "price": "30 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795283784493_825.jpg"
+        },
+        {
+          "name": "وجبة دجاجة كاملة مشوية",
+          "description": "(رز - بطاطا)",
+          "price": "55 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1794954062915_885.jpg"
+        },
+        {
+          "name": "وجبة ربع دجاج مشوية",
+          "description": "(رز - بطاطا)",
+          "price": "18 د.ل",
+          "image": ""
+        },
+        {
+          "name": "وجبة كفتة بالدجاج",
+          "description": "(رز - بطاطا)",
+          "price": "40 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795108526391_574.jpg"
+        },
+        {
+          "name": "كيلو شيش طاووق",
+          "description": "(10 أسياخ - رز - بطاطا)",
+          "price": "110 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795036250939_287.jpg"
+        },
+        {
+          "name": "نص كيلو شيش طاووق",
+          "description": "(5 أسياخ - رز - بطاطا)",
+          "price": "60 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795283786343_617.jpg"
+        },
+        {
+          "name": "كيلو كباب دجاج",
+          "description": "(14 سيخ - رز - بطاطا)",
+          "price": "110 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795036253081_990.jpg"
+        },
+        {
+          "name": "نصف كيلو كباب دجاج",
+          "description": "(7 أسياخ - رز - بطاطا)",
+          "price": "60 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795283787976_917.jpg"
+        },
+        {
+          "name": "وجبة شيش طاووق سيخين",
+          "description": "(سيخين - رز - بطاطا)",
+          "price": "27 د.ل",
+          "image": ""
+        },
+        {
+          "name": "وجبة كباب دجاج سيخين",
+          "description": "(سيخين - رز - بطاطا)",
+          "price": "25 د.ل",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "section_name": "وجبات الروابي مشكل",
+      "items": [
+        {
+          "name": "وجبة مشكل صغير",
+          "description": "(3 أسياخ - رز - بطاطا)",
+          "price": "35 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795109196355_918.jpg"
+        },
+        {
+          "name": "وجبة مشكل صغير بالمكسرات",
+          "description": "(3 أسياخ - رز - بطاطا)",
+          "price": "40 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795185590262_662.jpg"
+        },
+        {
+          "name": "وجبة مشكل كبير",
+          "description": "(5 أسياخ - رز - بطاطا)",
+          "price": "60 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795018189847_783.jpg"
+        },
+        {
+          "name": "كيلو مشكل الروابي",
+          "description": "(14 أسياخ - رز - بطاطا)",
+          "price": "150 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795185592278_381.jpg"
+        },
+        {
+          "name": "نص كيلو مشكل الروابي",
+          "description": "(7 أسياخ - رز - بطاطا)",
+          "price": "80 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795110660015_80.jpg"
+        },
+        {
+          "name": "كيلو مشكل الروابي بالمكسرات",
+          "description": "(16 أسياخ - رز - بطاطا)",
+          "price": "190 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795284169875_591.jpg"
+        },
+        {
+          "name": "نصف كيلو مشكل الروابي بالمكسرات",
+          "description": "(8 أسياخ - رز - بطاطا)",
+          "price": "100 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1794951640772_837.jpg"
+        },
+        {
+          "name": "كيلو مشكل الروابي اكسترا",
+          "description": "(16 أسياخ - رز - بطاطا - نص دجاجة)",
+          "price": "190 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795279411308_888.jpg"
+        },
+        {
+          "name": "سفرة مشكل الروابي",
+          "description": "(18 أسياخ - رز - بطاطا - نص دجاجة)",
+          "price": "250 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795185594134_838.jpg"
+        }
+      ]
+    },
+    {
+      "section_name": "سندوتشات مشاوي",
+      "items": [
+        {
+          "name": "شيش طاووق بالجبنة",
+          "description": "",
+          "price": "11 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795286531849_727.jpg"
+        },
+        {
+          "name": "كباب لحم",
+          "description": "",
+          "price": "10 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795286867381_661.jpg"
+        },
+        {
+          "name": "كباب دجاج",
+          "description": "",
+          "price": "9 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795288333758_943.jpg"
+        },
+        {
+          "name": "كباب لحم دبل سيخ",
+          "description": "",
+          "price": "16 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795288765182_626.jpg"
+        },
+        {
+          "name": "كباب دجاج دبل سيخ",
+          "description": "",
+          "price": "14 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795288767909_150.jpg"
+        },
+        {
+          "name": "كفتة لحم",
+          "description": "",
+          "price": "16 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795288769979_776.jpg"
+        },
+        {
+          "name": "كفتة دجاج",
+          "description": "",
+          "price": "14 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795288773226_671.jpg"
+        },
+        {
+          "name": "شيش طاووق اكسترا",
+          "description": "",
+          "price": "15 د.ل",
+          "image": ""
+        },
+        {
+          "name": "كباب لحم اكسترا",
+          "description": "",
+          "price": "13 د.ل",
+          "image": ""
+        },
+        {
+          "name": "كباب دجاج اكسترا",
+          "description": "",
+          "price": "12 د.ل",
+          "image": ""
+        },
+        {
+          "name": "تويستر دجاج",
+          "description": "",
+          "price": "20 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795111447845_647.jpg"
+        }
+      ]
+    },
+    {
+      "section_name": "وجبات فخارة",
+      "items": [
+        {
+          "name": "فخارة شيش طاووق بالجبنه",
+          "description": "",
+          "price": "40 د.ل",
+          "image": ""
+        },
+        {
+          "name": "فخارة توشكا لحم بالجبنة",
+          "description": "",
+          "price": "45 د.ل",
+          "image": ""
+        },
+        {
+          "name": "فخارة كباب هندي لحم",
+          "description": "",
+          "price": "35 د.ل",
+          "image": ""
+        },
+        {
+          "name": "فخارة كباب هندي دجاج",
+          "description": "",
+          "price": "30 د.ل",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "section_name": "وجبات شاورما",
+      "items": [
+        {
+          "name": "وجبة شاورما شرائح",
+          "description": "(رز - بطاطا)",
+          "price": "35 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795286527414_628.jpg"
+        },
+        {
+          "name": "صحن شاورما عربي",
+          "description": "",
+          "price": "40 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795109199088_502.jpg"
+        },
+        {
+          "name": "صحن شاورما عربي مع شرائح",
+          "description": "",
+          "price": "45 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795283213718_952.jpg"
+        },
+        {
+          "name": "بوكس شاورما الروابي",
+          "description": "",
+          "price": "30 د.ل",
+          "image": ""
+        },
+        {
+          "name": "بوكس شاورما عائلي",
+          "description": "",
+          "price": "130 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795289506918_1.jpg"
+        },
+        {
+          "name": "وجبة فتة شاورما",
+          "description": "",
+          "price": "25 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795037305180_140.jpg"
+        }
+      ]
+    },
+    {
+      "section_name": "كنتاكي",
+      "items": [
+        {
+          "name": "وجبة كنتاكي 3 قطع",
+          "description": "(خبزة + بطاطا)",
+          "price": "25 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795275263370_148.jpg"
+        },
+        {
+          "name": "وجبة كنتاكي 5 قطع",
+          "description": "(خبزة + بطاطا)",
+          "price": "35 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795275270329_101.jpg"
+        },
+        {
+          "name": "وجبة كنتاكي 9 قطع",
+          "description": "(خبزة + بطاطا)",
+          "price": "60 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795275282431_155.jpg"
+        },
+        {
+          "name": "وجبة سوبر مكس 12 قطعه",
+          "description": "(خبزة + بطاطا)",
+          "price": "75 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795275291433_111.jpg"
+        },
+        {
+          "name": "وجبة عائلية 15 قطعه",
+          "description": "(خبزة + بطاطا)",
+          "price": "95 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795275296135_95.jpg"
+        },
+        {
+          "name": "وجبة استربس",
+          "description": "",
+          "price": "30 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795036908654_296.jpg"
+        },
+        {
+          "name": "وجبة فتة استربس",
+          "description": "",
+          "price": "25 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795034942461_26.jpg"
+        },
+        {
+          "name": "وجبة ناتشوز بطاطا",
+          "description": "",
+          "price": "25 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795035660621_77.jpg"
+        }
+      ]
+    },
+    {
+      "section_name": "معجنات",
+      "items": [
+        {
+          "name": "مقلوبة دجاج",
+          "description": "",
+          "price": "20 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795185596054_495.jpg"
+        },
+        {
+          "name": "مقلوبة لحم",
+          "description": "",
+          "price": "25 د.ل",
+          "image": ""
+        },
+        {
+          "name": "باقيت دجاج",
+          "description": "",
+          "price": "23 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795183969446_864.jpg"
+        },
+        {
+          "name": "تشيز ملفوف",
+          "description": "",
+          "price": "27 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795280646891_539.jpg"
+        },
+        {
+          "name": "لفايف كباب لحم",
+          "description": "",
+          "price": "23 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795042298516_129.jpg"
+        },
+        {
+          "name": "كورنو",
+          "description": "",
+          "price": "23 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795186002427_211.jpg"
+        },
+        {
+          "name": "صفيحة لحم",
+          "description": "",
+          "price": "17 د.ل",
+          "image": ""
+        },
+        {
+          "name": "صفيحة لحم بالجبنة",
+          "description": "",
+          "price": "20 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795280648888_380.jpg"
+        },
+        {
+          "name": "صفيحة جبنة",
+          "description": "",
+          "price": "15 د.ل",
+          "image": ""
+        },
+        {
+          "name": "كيلو صفيحة لحم",
+          "description": "",
+          "price": "100 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795277941924_331.jpg"
+        },
+        {
+          "name": "نص كيلو صفيحة لحم",
+          "description": "",
+          "price": "50 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795278741745_640.jpg"
+        },
+        {
+          "name": "ربع كيلو صفيحة لحم",
+          "description": "",
+          "price": "25 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795278743945_486.jpg"
+        }
+      ]
+    },
+    {
+      "section_name": "بيتزا",
+      "items": [
+        {
+          "name": "بيتزا مرغريتا",
+          "description": "",
+          "price": "18 د.ل",
+          "image": ""
+        },
+        {
+          "name": "بيتزا خضروات",
+          "description": "",
+          "price": "20 د.ل",
+          "image": ""
+        },
+        {
+          "name": "بيتزا فقاع",
+          "description": "",
+          "price": "22 د.ل",
+          "image": ""
+        },
+        {
+          "name": "بيتزا تن",
+          "description": "",
+          "price": "24 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795283211558_925.jpg"
+        },
+        {
+          "name": "بيتزا دجاج",
+          "description": "",
+          "price": "26 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795034940286_665.jpg"
+        },
+        {
+          "name": "بيتزا مشكل",
+          "description": "",
+          "price": "30 د.ل",
+          "image": ""
+        },
+        {
+          "name": "بيتزا كباب لحم",
+          "description": "",
+          "price": "26 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795111450489_391.jpg"
+        },
+        {
+          "name": "بيتزا الروابي",
+          "description": "",
+          "price": "35 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1794950820579_518.jpg"
+        }
+      ]
+    },
+    {
+      "section_name": "سلايط ومقبلات",
+      "items": [
+        {
+          "name": "سلاطة مشكل صغير",
+          "description": "",
+          "price": "15 د.ل",
+          "image": ""
+        },
+        {
+          "name": "سلاطة مشكل كبير",
+          "description": "",
+          "price": "20 د.ل",
+          "image": ""
+        },
+        {
+          "name": "كبة مشوية",
+          "description": "",
+          "price": "8 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795286209914_689.jpg"
+        },
+        {
+          "name": "كبة مقلية",
+          "description": "",
+          "price": "6 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795185600060_944.jpg"
+        },
+        {
+          "name": "صحن رز",
+          "description": "",
+          "price": "10 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795286524697_566.jpg"
+        },
+        {
+          "name": "صحن رز جربي",
+          "description": "",
+          "price": "10 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795290078416_711.jpg"
+        },
+        {
+          "name": "صحن بطاطا",
+          "description": "",
+          "price": "10 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795288621646_712.jpg"
+        },
+        {
+          "name": "صحن شوربة",
+          "description": "",
+          "price": "5 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795036906619_764.jpg"
+        }
+      ]
+    },
+    {
+      "section_name": "شاورما",
+      "items": [
+        {
+          "name": "شاورما عادية",
+          "description": "",
+          "price": "10 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795183833846_490.jpg"
+        },
+        {
+          "name": "شاورما بالجبنة",
+          "description": "",
+          "price": "11 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795183835750_727.jpg"
+        },
+        {
+          "name": "شاورما دبل فطيرة",
+          "description": "",
+          "price": "11 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795019621122_961.jpg"
+        },
+        {
+          "name": "شاورما اكسترا",
+          "description": "",
+          "price": "15 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795185598002_39.jpg"
+        },
+        {
+          "name": "شاورما عربي",
+          "description": "",
+          "price": "15 د.ل",
+          "image": ""
+        },
+        {
+          "name": "بوكس شاورما اكسترا",
+          "description": "",
+          "price": "25 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795036910064_863.jpg"
+        }
+      ]
+    },
+    {
+      "section_name": "مشروبات",
+      "items": [
+        {
+          "name": "مشروب غازي",
+          "description": "",
+          "price": "4 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795019871115_646.jpg"
+        },
+        {
+          "name": "مشروب جرين",
+          "description": "",
+          "price": "5 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795019873048_190.jpg"
+        },
+        {
+          "name": "مشروب العين",
+          "description": "",
+          "price": "3 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795019059983_443.jpg"
+        }
+      ]
+    }
+  ],
+  "hall_sections": [
+    {
+      "section_name": "وجبات الروابي لحم",
+      "items": [
+        {
+          "name": "وجبة كباب لحم",
+          "description": "(3 أسياخ - رز - بطاطا)",
+          "price": "35 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795109362324_681.jpg"
+        },
+        {
+          "name": "وجبة شيش لحم",
+          "description": "(3 أسياخ - رز - بطاطا)",
+          "price": "50 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1794943656533_465.jpg"
+        },
+        {
+          "name": "وجبة كفتة لحم",
+          "description": "",
+          "price": "45 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795187093097_563.jpg"
+        },
+        {
+          "name": "وجبة كباب لحم بالجبنه",
+          "description": "",
+          "price": "50 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795287588869_192.jpg"
+        },
+        {
+          "name": "وجبة ليالي بالجبنة والمكسرات",
+          "description": "",
+          "price": "50 د.ل",
+          "image": ""
+        },
+        {
+          "name": "وجبة حوت",
+          "description": "(رز - بطاطا)",
+          "price": "60 د.ل",
+          "image": ""
+        },
+        {
+          "name": "كيلو كباب لحم",
+          "description": "(14 سيخ - رز - بطاطا)",
+          "price": "130 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795279949835_0.jpg"
+        },
+        {
+          "name": "نص كيلو كباب لحم",
+          "description": "(7 أسياخ - رز - بطاطا)",
+          "price": "70 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795107225675_947.jpg"
+        },
+        {
+          "name": "وجبة سوشي كباب لحم",
+          "description": "",
+          "price": "35 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795109692055_962.jpg"
+        },
+        {
+          "name": "وجبة سوشي كباب لحم بالجبنة",
+          "description": "",
+          "price": "40 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795109693797_272.jpg"
+        }
+      ]
+    },
+    {
+      "section_name": "وجبات الروابي دجاج",
+      "items": [
+        {
+          "name": "وجبة شيش طاووق",
+          "description": "(3 أسياخ - رز - بطاطا)",
+          "price": "35 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795187095607_301.jpg"
+        },
+        {
+          "name": "وجبة كباب دجاج",
+          "description": "(3 أسياخ - رز - بطاطا)",
+          "price": "30 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795187097443_413.jpg"
+        },
+        {
+          "name": "وجبة جناوح دجاج",
+          "description": "(سيخين - رز - بطاطا)",
+          "price": "27 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1794949430228_269.jpg"
+        },
+        {
+          "name": "وجبة كباب دجاج بالجبنه",
+          "description": "",
+          "price": "45 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795287591325_926.jpg"
+        },
+        {
+          "name": "وجبة نص دجاج مشوية",
+          "description": "(رز - بطاطا)",
+          "price": "30 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795283622720_623.jpg"
+        },
+        {
+          "name": "وجبة كفتة بالدجاج",
+          "description": "(رز - بطاطا)",
+          "price": "40 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795274518870_62.jpg"
+        },
+        {
+          "name": "كيلو شيش طاووق",
+          "description": "(10 أسياخ - رز - بطاطا)",
+          "price": "110 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795037515710_610.jpg"
+        },
+        {
+          "name": "نص كيلو شيش طاووق",
+          "description": "(5 أسياخ - رز - بطاطا)",
+          "price": "60 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795283624553_835.jpg"
+        },
+        {
+          "name": "كيلو كباب دجاج",
+          "description": "(14 سيخ - رز - بطاطا)",
+          "price": "110 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795037517210_324.jpg"
+        },
+        {
+          "name": "نصف كيلو كباب دجاج",
+          "description": "",
+          "price": "60 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795283626393_676.jpg"
+        }
+      ]
+    },
+    {
+      "section_name": "وجبات الروابي مشكل",
+      "items": [
+        {
+          "name": "وجبة مشكل صغير",
+          "description": "(3 أسياخ - رز - بطاطا)",
+          "price": "35 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795109689685_736.jpg"
+        },
+        {
+          "name": "وجبة مشكل صغير بالمكسرات",
+          "description": "(3 أسياخ - رز - بطاطا)",
+          "price": "40 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795187099088_624.jpg"
+        },
+        {
+          "name": "وجبة مشكل كبير",
+          "description": "(5 أسياخ - رز - بطاطا)",
+          "price": "60 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795107145024_255.jpg"
+        },
+        {
+          "name": "كيلو مشكل الروابي",
+          "description": "(14 أسياخ - رز - بطاطا)",
+          "price": "150 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795187100816_243.jpg"
+        },
+        {
+          "name": "نص كيلو مشكل الروابي",
+          "description": "(7 أسياخ - رز - بطاطا)",
+          "price": "80 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795110349149_958.jpg"
+        },
+        {
+          "name": "كيلو مشكل الروابي بالمكسرات",
+          "description": "(16 أسياخ - رز - بطاطا)",
+          "price": "190 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795284866384_504.jpg"
+        },
+        {
+          "name": "نصف كيلو مشكل الروابي بالمكسرات",
+          "description": "(8 أسياخ - رز - بطاطا)",
+          "price": "100 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1794949036695_350.jpg"
+        },
+        {
+          "name": "كيلو مشكل الروابي اكسترا",
+          "description": "(16 أسياخ - رز - بطاطا - نص دجاجة)",
+          "price": "190 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795284523334_891.jpg"
+        },
+        {
+          "name": "سفرة مشكل الروابي",
+          "description": "(18 أسياخ - رز - بطاطا - نص دجاجة)",
+          "price": "250 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795108005250_22.jpg"
+        }
+      ]
+    },
+    {
+      "section_name": "سندوتشات مشاوي",
+      "items": [
+        {
+          "name": "شيش طاووق بالجبنة",
+          "description": "",
+          "price": "12 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795287901782_271.jpg"
+        },
+        {
+          "name": "كباب لحم",
+          "description": "",
+          "price": "12 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795290274305_787.jpg"
+        },
+        {
+          "name": "كباب دجاج",
+          "description": "",
+          "price": "10 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795290869309_189.jpg"
+        },
+        {
+          "name": "كباب لحم دبل سيخ",
+          "description": "",
+          "price": "18 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795291741209_319.jpg"
+        },
+        {
+          "name": "كباب دجاج دبل سيخ",
+          "description": "",
+          "price": "16 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795291743147_975.jpg"
+        },
+        {
+          "name": "كفتة لحم",
+          "description": "",
+          "price": "16 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795291744682_722.jpg"
+        },
+        {
+          "name": "كفتة دجاج",
+          "description": "",
+          "price": "14 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795291746113_497.jpg"
+        },
+        {
+          "name": "شيش طاووق اكسترا",
+          "description": "",
+          "price": "15 د.ل",
+          "image": ""
+        },
+        {
+          "name": "كباب لحم اكسترا",
+          "description": "",
+          "price": "15 د.ل",
+          "image": ""
+        },
+        {
+          "name": "كباب دجاج اكسترا",
+          "description": "",
+          "price": "13 د.ل",
+          "image": ""
+        },
+        {
+          "name": "تويستر دجاج",
+          "description": "",
+          "price": "20 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795111603530_637.jpg"
+        }
+      ]
+    },
+    {
+      "section_name": "وجبات فخارة",
+      "items": [
+        {
+          "name": "فخارة شيش طاووق بالجبنه",
+          "description": "",
+          "price": "40 د.ل",
+          "image": ""
+        },
+        {
+          "name": "فخارة توشكا لحم بالجبنة",
+          "description": "",
+          "price": "45 د.ل",
+          "image": ""
+        },
+        {
+          "name": "فخارة كباب هندي لحم",
+          "description": "",
+          "price": "35 د.ل",
+          "image": ""
+        },
+        {
+          "name": "فخارة كباب هندي دجاج",
+          "description": "",
+          "price": "30 د.ل",
+          "image": ""
+        },
+        {
+          "name": "فخارة شاورما بالجبنة",
+          "description": "",
+          "price": "40 د.ل",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "section_name": "وجبات شاورما",
+      "items": [
+        {
+          "name": "وجبة شاورما شرائح",
+          "description": "",
+          "price": "40 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795287903261_150.jpg"
+        },
+        {
+          "name": "صحن شاورما عربي",
+          "description": "",
+          "price": "45 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795110346708_183.jpg"
+        },
+        {
+          "name": "صحن شاورما عربي مع شرائح",
+          "description": "",
+          "price": "50 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795283325604_673.jpg"
+        },
+        {
+          "name": "بوكس شاورما الروابي",
+          "description": "",
+          "price": "35 د.ل",
+          "image": ""
+        },
+        {
+          "name": "بوكس شاورما عائلي",
+          "description": "",
+          "price": "140 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795289222379_438.jpg"
+        },
+        {
+          "name": "وجبة فتة شاورما",
+          "description": "",
+          "price": "30 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795037506706_394.jpg"
+        }
+      ]
+    },
+    {
+      "section_name": "كنتاكي",
+      "items": [
+        {
+          "name": "وجبة كنتاكي 3 قطع",
+          "description": "(خبزة + بطاطا)",
+          "price": "25 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795274985598_338.jpg"
+        },
+        {
+          "name": "وجبة كنتاكي 5 قطع",
+          "description": "(خبزة + بطاطا)",
+          "price": "35 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795274988729_365.jpg"
+        },
+        {
+          "name": "وجبة كنتاكي 9 قطع",
+          "description": "(خبزة + بطاطا)",
+          "price": "60 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795274991713_755.jpg"
+        },
+        {
+          "name": "وجبة سوبر مكس 12 قطعه",
+          "description": "(خبزة + بطاطا)",
+          "price": "75 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795274995073_346.jpg"
+        },
+        {
+          "name": "وجبة عائلية 15 قطعه",
+          "description": "(خبزة + بطاطا)",
+          "price": "95 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795274997327_106.jpg"
+        },
+        {
+          "name": "وجبة استربس",
+          "description": "",
+          "price": "35 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795037508783_207.jpg"
+        },
+        {
+          "name": "وجبة فتة استربس",
+          "description": "",
+          "price": "30 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795037510549_920.jpg"
+        },
+        {
+          "name": "وجبة ناتشوز بطاطا",
+          "description": "",
+          "price": "30 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795037514145_819.jpg"
+        }
+      ]
+    },
+    {
+      "section_name": "معجنات",
+      "items": [
+        {
+          "name": "مقلوبة دجاج",
+          "description": "",
+          "price": "20 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795187102460_933.jpg"
+        },
+        {
+          "name": "مقلوبة لحم",
+          "description": "",
+          "price": "25 د.ل",
+          "image": ""
+        },
+        {
+          "name": "باقيت لحم",
+          "description": "",
+          "price": "30 د.ل",
+          "image": ""
+        },
+        {
+          "name": "باقيت دجاج",
+          "description": "",
+          "price": "25 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795111605389_143.jpg"
+        },
+        {
+          "name": "تشيز ملفوف",
+          "description": "",
+          "price": "27 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795280218555_476.jpg"
+        },
+        {
+          "name": "لفايف كباب لحم",
+          "description": "",
+          "price": "25 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795106818393_515.jpg"
+        },
+        {
+          "name": "كورنو",
+          "description": "",
+          "price": "25 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795187104304_356.jpg"
+        },
+        {
+          "name": "صفيحة لحم",
+          "description": "",
+          "price": "20 د.ل",
+          "image": ""
+        },
+        {
+          "name": "صفيحة لحم بالجبنة",
+          "description": "",
+          "price": "25 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795280582135_273.jpg"
+        },
+        {
+          "name": "صفيحة جبنة",
+          "description": "",
+          "price": "15 د.ل",
+          "image": ""
+        },
+        {
+          "name": "كيلو صفيحة لحم",
+          "description": "",
+          "price": "100 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795278584656_136.jpg"
+        },
+        {
+          "name": "نص كيلو صفيحة لحم",
+          "description": "",
+          "price": "50 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795278586469_689.jpg"
+        }
+      ]
+    },
+    {
+      "section_name": "بيتزا",
+      "items": [
+        {
+          "name": "بيتزا مرغريتا",
+          "description": "",
+          "price": "18 د.ل",
+          "image": ""
+        },
+        {
+          "name": "بيتزا خضروات",
+          "description": "",
+          "price": "20 د.ل",
+          "image": ""
+        },
+        {
+          "name": "بيتزا فقاع",
+          "description": "",
+          "price": "22 د.ل",
+          "image": ""
+        },
+        {
+          "name": "بيتزا تن",
+          "description": "",
+          "price": "24 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795280221284_129.jpg"
+        },
+        {
+          "name": "بيتزا دجاج",
+          "description": "",
+          "price": "26 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795110661984_550.jpg"
+        },
+        {
+          "name": "بيتزا مشكل",
+          "description": "",
+          "price": "30 د.ل",
+          "image": ""
+        },
+        {
+          "name": "بيتزا كباب لحم",
+          "description": "",
+          "price": "26 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795284868726_667.jpg"
+        },
+        {
+          "name": "بيتزا الروابي",
+          "description": "",
+          "price": "35 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795106569434_639.jpg"
+        }
+      ]
+    },
+    {
+      "section_name": "سلايط ومقبلات",
+      "items": [
+        {
+          "name": "سلاطة مشكل صغير",
+          "description": "",
+          "price": "15 د.ل",
+          "image": ""
+        },
+        {
+          "name": "سلاطة مشكل كبير",
+          "description": "",
+          "price": "20 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795290076122_971.jpg"
+        },
+        {
+          "name": "كبة مشوية",
+          "description": "",
+          "price": "8 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795287596243_744.jpg"
+        },
+        {
+          "name": "صحن كبة مقلية",
+          "description": "",
+          "price": "20 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795187105836_423.jpg"
+        },
+        {
+          "name": "صحن بطاطا",
+          "description": "",
+          "price": "10 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795287594905_203.jpg"
+        },
+        {
+          "name": "صحن رز",
+          "description": "",
+          "price": "10 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795287593118_949.jpg"
+        },
+        {
+          "name": "صحن رز جربي",
+          "description": "",
+          "price": "10 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795289758128_952.jpg"
+        },
+        {
+          "name": "صحن شوربة",
+          "description": "",
+          "price": "5 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795106571733_455.jpg"
+        }
+      ]
+    },
+    {
+      "section_name": "شاورما",
+      "items": [
+        {
+          "name": "شاورما اكسترا",
+          "description": "",
+          "price": "18 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795187107493_167.jpg"
+        },
+        {
+          "name": "شاورما عربي",
+          "description": "",
+          "price": "18 د.ل",
+          "image": ""
+        },
+        {
+          "name": "بوكس شاورما اكسترا",
+          "description": "",
+          "price": "25 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795106573561_206.jpg"
+        }
+      ]
+    },
+    {
+      "section_name": "مشروبات",
+      "items": [
+        {
+          "name": "مشروب غازي",
+          "description": "",
+          "price": "4 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795106578979_713.jpg"
+        },
+        {
+          "name": "مشروب جرين",
+          "description": "",
+          "price": "5 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795106577246_881.jpg"
+        },
+        {
+          "name": "مشروب العين",
+          "description": "",
+          "price": "3 د.ل",
+          "image": "https://raw.githubusercontent.com/hmodajoma-sketch/alrawabi-menu/main/images/img_1795106575290_46.jpg"
+        }
+      ]
+    }
+  ]
+}
