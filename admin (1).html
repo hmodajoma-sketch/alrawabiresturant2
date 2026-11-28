@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>لوحة تحكم المنيو</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#111815;--c:#18221d;--l:#2b3d33;--t:#eef3ee;--m:#93a89a;--a:#f5b83d;color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+body{font-family:Tajawal,system-ui,sans-serif;background:var(--bg);color:var(--t);padding:12px 12px 80px;max-width:900px;margin:auto;line-height:1.5}
+input,button{font:inherit;color:inherit}
+input{width:100%;padding:10px;border-radius:8px;border:1px solid var(--l);background:#0d1411}
+button{cursor:pointer;border:0;border-radius:8px;padding:9px 14px;background:var(--l)}
+:focus-visible{outline:3px solid var(--a);outline-offset:2px}
+h1,h3{margin:8px 0}
+label{display:block;margin:12px 0 4px;color:var(--m)}
+.chk{display:flex;gap:8px;align-items:center}.chk input{width:auto}
+.pri{background:var(--a);color:#1a1205;font-weight:700}
+.dan{background:#7a2020}
+.msg{color:var(--a);margin:8px 0}
+#login{max-width:460px;margin:30px auto}
+#login button.pri{width:100%;margin-top:14px;padding:12px}
+details{background:var(--c);border:1px solid var(--l);border-radius:12px;margin:10px 0;padding:10px}
+summary{cursor:pointer;padding:4px}
+ol{padding-inline-start:22px;color:var(--m);margin-top:8px}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.card{background:var(--c);border:1px solid var(--l);border-radius:12px;padding:12px;margin:10px 0}
+#tabs{display:flex;gap:8px;margin:10px 0}
+.sech{display:flex;gap:6px;margin:10px 0}.sech input{flex:1}
+.it{border:1px solid var(--l);border-radius:10px;padding:10px;margin:10px 0;display:grid;gap:8px;background:#141d18}
+.r2{display:flex;gap:8px}.r2 input:first-child{flex:2}.r2 input:last-child{flex:1}
+.imgf{display:flex;gap:6px;align-items:center}
+.th{width:52px;height:52px;border-radius:8px;object-fit:cover;flex:none;background:var(--l)}
+.ctl{display:flex;gap:6px;justify-content:flex-end}
+.add{width:100%;background:transparent;border:1px dashed var(--a);color:var(--a)}
+</style>
+</head>
+<body>
+
+<section id="login">
+  <h1>لوحة تحكم المنيو</h1>
+  <label for="o">اسم المستخدم في GitHub</label><input id="o" dir="ltr">
+  <label for="r">اسم المستودع</label><input id="r" dir="ltr">
+  <label for="b">الفرع</label><input id="b" dir="ltr">
+  <label for="t">رمز الوصول (Token)</label><input id="t" type="password" autocomplete="off" dir="ltr">
+  <label class="chk"><input id="rem" type="checkbox" checked> تذكّر على هذا الجهاز</label>
+  <button class="pri" id="go">دخول</button>
+  <p class="msg" id="lmsg"></p>
+  <details><summary>كيف أنشئ الرمز؟</summary>
+    <ol>
+      <li>GitHub ← صورة حسابك ← Settings ← Developer settings.</li>
+      <li>Personal access tokens ← Fine-grained tokens ← Generate new token.</li>
+      <li>Repository access: اختر Only select repositories ثم المستودع المطلوب فقط.</li>
+      <li>Permissions ← Repository permissions ← Contents: Read and write.</li>
+      <li>انسخ الرمز والصقه هنا. لا تشاركه مع أحد.</li>
+    </ol>
+  </details>
+</section>
+
+<section id="app" hidden>
+  <div class="bar">
+    <button class="pri" id="save">💾 حفظ التغييرات</button>
+    <button id="bak">نسخة احتياطية</button>
+    <button id="out">خروج</button>
+  </div>
+  <p class="msg" id="msg"></p>
+  <details class="card"><summary>الشعار وصورة الغلاف</summary><div id="gf"></div></details>
+  <div id="tabs"></div>
+  <input id="q" placeholder="ابحث عن صنف..." aria-label="بحث">
+  <div id="list"></div>
+  <button class="add" id="addsec">+ إضافة قسم</button>
+</section>
+
+<script>
+const $=s=>document.querySelector(s);
+const el=(t,p={},...k)=>{const e=document.createElement(t);Object.assign(e,p);k.flat().forEach(c=>e.append(c));return e};
+const btn=(t,f,c)=>el("button",{textContent:t,onclick:f,className:c||""});
+let S={},data={},sha="",key="sections",dirty=false;
+const openS=new Set();
+const msg=t=>{$("#msg").textContent=t};
+const KEYS=["sections","hall_sections"];
+
+/* ---------- GitHub API ---------- */
+const u8b64=b=>{let s="";for(let i=0;i<b.length;i+=8192)s+=String.fromCharCode.apply(null,b.subarray(i,i+8192));return btoa(s)};
+const enc=t=>u8b64(new TextEncoder().encode(t));
+const dec=b=>new TextDecoder().decode(Uint8Array.from(atob(b.replace(/\s/g,"")),c=>c.charCodeAt(0)));
+async function api(path,opt={}){
+  const get=!opt.method;
+  const r=await fetch("https://api.github.com/repos/"+S.owner+"/"+S.repo+"/contents/"+path+(get?"?ref="+encodeURIComponent(S.branch)+"&t="+Date.now():""),
+    {...opt,headers:{Authorization:"Bearer "+S.token,Accept:"application/vnd.github+json",...(get?{}:{"Content-Type":"application/json"})}});
+  const j=await r.json().catch(()=>({}));
+  if(!r.ok)throw new Error(r.status+" "+(j.message||""));
+  return j;
+}
+const explain=e=>{
+  const m=String(e.message||e);
+  if(m.startsWith("401"))return "الرمز غير صحيح أو منتهي الصلاحية.";
+  if(m.startsWith("403"))return "الرمز لا يملك صلاحية الكتابة (Contents: Read and write).";
+  if(m.startsWith("404"))return "المستودع أو ملف menu.json غير موجود، أو الرمز لا يشمل هذا المستودع.";
+  if(m.startsWith("409")||m.startsWith("422"))return "تغيّر الملف من مكان آخر. أعد تحميل الصفحة ثم عدّل من جديد.";
+  return "خطأ: "+m;
+};
+async function load(){
+  const j=await api("menu.json");
+  data=JSON.parse(dec(j.content));sha=j.sha;dirty=false;
+}
+
+/* ---------- Images ---------- */
+const thumb=(i,u)=>{i.hidden=!u;i.onerror=null;if(!u)return;i.onerror=()=>{i.onerror=null;i.src=u};i.src="https://wsrv.nl/?url="+encodeURIComponent(u)+"&w=120&q=60&output=webp"};
+async function up(file){
+  const bmp=await createImageBitmap(file);
+  const k=Math.min(1,900/Math.max(bmp.width,bmp.height));
+  const c=document.createElement("canvas");c.width=Math.round(bmp.width*k);c.height=Math.round(bmp.height*k);
+  c.getContext("2d").drawImage(bmp,0,0,c.width,c.height);
+  const blob=await new Promise(r=>c.toBlob(r,"image/jpeg",.78));
+  const name="img_"+Date.now()+"_"+Math.floor(Math.random()*1000)+".jpg";
+  await api("images/"+name,{method:"PUT",body:JSON.stringify({message:"Upload image "+name,content:u8b64(new Uint8Array(await blob.arrayBuffer())),branch:S.branch})});
+  return "https://raw.githubusercontent.com/"+S.owner+"/"+S.repo+"/"+S.branch+"/images/"+name;
+}
+function imgField(o,p){
+  const w=el("div",{className:"imgf"});
+  const th=el("img",{className:"th",alt:""});
+  const inp=el("input",{value:o[p]||"",placeholder:"رابط الصورة",dir:"ltr"});
+  const file=el("input",{type:"file",accept:"image/*",hidden:true});
+  const set=v=>{o[p]=v;inp.value=v;dirty=true;thumb(th,v)};
+  inp.oninput=()=>{o[p]=inp.value.trim();dirty=true;thumb(th,o[p])};
+  file.onchange=async()=>{
+    if(!file.files[0])return;
+    try{msg("جاري ضغط الصورة ورفعها...");set(await up(file.files[0]));msg("تم رفع الصورة. لا تنس حفظ التغييرات.")}
+    catch(e){msg(explain(e))}
+    file.value="";
+  };
+  thumb(th,o[p]);
+  w.append(th,inp,btn("📷 رفع",()=>file.click()),btn("✕",()=>set("")),file);
+  return w;
+}
+
+/* ---------- Editing ---------- */
+const mv=(a,i,d)=>{const j=i+d;if(j<0||j>=a.length)return;[a[i],a[j]]=[a[j],a[i]];dirty=true;render()};
+function row(s,ii){
+  const it=s.items[ii],d=el("div",{className:"it"});
+  const nm=el("input",{value:it.name||"",placeholder:"اسم الصنف",oninput(){it.name=this.value;dirty=true}});
+  const pr=el("input",{value:it.price||"",placeholder:"السعر",inputMode:"numeric",oninput(){it.price=this.value;dirty=true},
+    onchange(){const v=this.value.trim();if(/^\d+$/.test(v)){this.value=it.price=v+" د.ل"}}});
+  const ds=el("input",{value:it.description||"",placeholder:"الوصف (اختياري)",oninput(){it.description=this.value;dirty=true}});
+  const ctl=el("div",{className:"ctl"},btn("↑",()=>mv(s.items,ii,-1)),btn("↓",()=>mv(s.items,ii,1)),
+    btn("🗑",()=>{if(confirm("حذف الصنف؟")){s.items.splice(ii,1);dirty=true;render()}},"dan"));
+  d.append(el("div",{className:"r2"},nm,pr),ds,imgField(it,"image"),ctl);
+  return d;
+}
+function render(){
+  const list=$("#list");list.replaceChildren();
+  const term=$("#q").value.trim(),secs=data[key];
+  secs.forEach((s,si)=>{
+    s.items=s.items||[];
+    const idx=s.items.map((_,i)=>i).filter(i=>!term||((s.items[i].name||"")+(s.items[i].description||"")).includes(term));
+    if(term&&!idx.length)return;
+    const d=el("details",{open:term?true:openS.has(s)});
+    d.ontoggle=()=>{if(!term)d.open?openS.add(s):openS.delete(s)};
+    d.append(el("summary",{},el("b",{textContent:s.section_name||"(بدون اسم)"}),el("small",{textContent:" · "+s.items.length+" صنف"})));
+    d.append(el("div",{className:"sech"},
+      el("input",{value:s.section_name||"",placeholder:"اسم القسم",oninput(){s.section_name=this.value;dirty=true}}),
+      btn("↑",()=>mv(secs,si,-1)),btn("↓",()=>mv(secs,si,1)),
+      btn("🗑",()=>{if(confirm("حذف القسم بكل أصنافه؟")){secs.splice(si,1);dirty=true;render()}},"dan")));
+    idx.forEach(i=>d.append(row(s,i)));
+    d.append(btn("+ إضافة صنف",()=>{s.items.push({name:"",description:"",price:"",image:""});openS.add(s);dirty=true;render()},"add"));
+    list.append(d);
+  });
+  if(!list.children.length)list.append(el("p",{className:"msg",textContent:"لا توجد نتائج."}));
+}
+function tabs(){
+  const t=$("#tabs");t.replaceChildren();
+  const ks=KEYS.filter(k=>Array.isArray(data[k]));
+  if(!ks.includes(key))key=ks[0]||"sections";
+  if(!Array.isArray(data[key]))data[key]=[];
+  if(ks.length>1)ks.forEach(k=>t.append(el("button",{textContent:k==="sections"?"السفري / التوصيل":"الصالة",className:k===key?"pri":"",onclick:()=>{key=k;tabs();render()}})));
+}
+function init(){
+  $("#gf").replaceChildren(el("label",{textContent:"الشعار"}),imgField(data,"logo"),el("label",{textContent:"صورة الغلاف"}),imgField(data,"background"));
+  tabs();render();msg("");
+}
+
+/* ---------- Actions ---------- */
+$("#q").oninput=render;
+$("#addsec").onclick=()=>{const s={section_name:"قسم جديد",items:[]};data[key].push(s);openS.add(s);dirty=true;render()};
+$("#bak").onclick=()=>{el("a",{href:URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:"application/json"})),download:"menu-backup.json"}).click()};
+$("#out").onclick=()=>{try{localStorage.removeItem("adm")}catch(e){}location.reload()};
+$("#save").onclick=async()=>{
+  KEYS.forEach(k=>(data[k]||[]).forEach(s=>{
+    s.section_name=(s.section_name||"").trim();
+    (s.items||[]).forEach(i=>{
+      i.name=(i.name||"").trim();i.description=(i.description||"").trim();i.image=(i.image||"").trim();
+      i.price=(i.price||"").trim();if(/^\d+$/.test(i.price))i.price+=" د.ل";
+    });
+  }));
+  if(KEYS.some(k=>(data[k]||[]).some(s=>!s.section_name||(s.items||[]).some(i=>!i.name)))){msg("يوجد قسم أو صنف بدون اسم. أكمله أو احذفه ثم احفظ.");return}
+  const b=$("#save");b.disabled=true;msg("جاري الحفظ...");
+  try{
+    const j=await api("menu.json",{method:"PUT",body:JSON.stringify({message:"Update menu via admin panel",content:enc(JSON.stringify(data,null,2)),sha,branch:S.branch})});
+    sha=j.content.sha;dirty=false;render();msg("✓ تم الحفظ. يظهر التغيير في الموقع خلال دقيقة تقريبًا.");
+  }catch(e){msg(explain(e))}
+  b.disabled=false;
+};
+$("#go").onclick=async()=>{
+  S={owner:$("#o").value.trim(),repo:$("#r").value.trim(),branch:$("#b").value.trim()||"main",token:$("#t").value.trim()};
+  if(!S.owner||!S.repo||!S.token){$("#lmsg").textContent="أكمل كل الحقول.";return}
+  $("#lmsg").textContent="جاري التحميل...";
+  try{
+    await load();
+    try{$("#rem").checked?localStorage.setItem("adm",JSON.stringify(S)):localStorage.removeItem("adm")}catch(e){}
+    $("#login").hidden=true;$("#app").hidden=false;init();
+  }catch(e){$("#lmsg").textContent=explain(e)}
+};
+window.addEventListener("beforeunload",e=>{if(dirty){e.preventDefault();e.returnValue=""}});
+let saved={};try{saved=JSON.parse(localStorage.getItem("adm")||"{}")}catch(e){}
+$("#o").value=saved.owner||"hmodajoma-sketch";
+$("#r").value=saved.repo||"alrawabiresturant2";
+$("#b").value=saved.branch||"main";
+$("#t").value=saved.token||"";
+</script>
+</body>
+</html>
